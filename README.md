@@ -34,7 +34,7 @@ Emacs major mode (`vimlrs-mode`) for **VimL (Vimscript)**, targeting the **[viml
 - **eldoc + completion** — one-line signatures and `completion-at-point` for VimL builtin functions.
 - **Language server** — `vimlrs --lsp` via **eglot** (built in since Emacs 29) and **lsp-mode**.
 
-`vimlrs` ports a fixed subset of Vim's builtin surface, so the keyword / command / function lists are plain `regexp-opt` lists in `vimlrs-mode.el` — no generated hash-table stdlib is needed (that machinery only exists in the sibling `emacs-stryke` because stryke's ~10,450 builtins overflow Emacs' regexp compiler). Builtin-function signatures for eldoc / completion live in `vimlrs-stdlib.el`, authored from the ported subset of Vim's `funcs.c` table.
+`vimlrs` ports a fixed subset of Vim's builtin surface, so the keyword / command / function lists are plain `regexp-opt` lists in `vimlrs-mode.el` — no generated hash-table stdlib is needed (that machinery only exists in the sibling `emacs-stryke` because stryke's ~10,493 builtins overflow Emacs' regexp compiler). Builtin-function signatures for eldoc / completion live in `vimlrs-stdlib.el`, authored from the ported subset of Vim's `funcs.c` table.
 
 VimL's classic `"` ambiguity (comment in command position, string in expression position) is resolved with a `syntax-propertize` rule: `"` is a string quote in the syntax table, and the rule re-marks the command-position `"` (line start, or after `|`) as a comment.
 
