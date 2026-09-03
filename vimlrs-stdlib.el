@@ -13,7 +13,7 @@
 ;;; Commentary:
 
 ;; Builtin-function metadata for `vimlrs-mode'.  Unlike stryke (whose
-;; ~10,450-builtin surface is generated from the binary's own reflection
+;; ~10,493-builtin surface is generated from the binary's own reflection
 ;; tables into `stryke-stdlib.el'), the `vimlrs' interpreter ports only a
 ;; fixed subset of Vim's `funcs.c' table, so the builtin surface is small,
 ;; finite, and tracked by hand here rather than generated.  This table
@@ -25,7 +25,7 @@
 ;; The function *names* are also font-locked by `vimlrs-mode' via a plain
 ;; `regexp-opt' (the list is well under Emacs' regexp-size limit, so no
 ;; hash-table matcher is needed — that machinery only exists in
-;; stryke-stdlib.el because 10,450 names overflow the regexp compiler).
+;; stryke-stdlib.el because 10,493 names overflow the regexp compiler).
 
 ;;; Code:
 
